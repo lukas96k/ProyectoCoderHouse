@@ -2,22 +2,21 @@
 .tablaDeCombos {
 	 display:inline-block;
 	 width:100%;
-	 margin-top:50px;
-
+	 margin-top:10px;
 }
 
 .tablaDeCombos__Columna{
 	 display:inline-block;
 	 background-color:#590242;
-	 width:80%;
+	 width:300px;
+	 height: 80%;
 	 max-width:500px;
 	 border-radius:10px;
-	 margin-bottom:50px;
 	 box-shadow: 0px 2px 5px #ddd
 }
 .tablaDeCombos__ColumnaHeader {
 	 background-color:#090b21;
-	 padding:20px;
+	 padding:10px;
 	 border-top-left-radius:10px;
 	 border-top-right-radius:10px
 }
@@ -41,7 +40,7 @@
 }
 
 .tablaDeCombos__ColumnaCaracteristicas p {
-	 padding:20px 0;
+	 padding:10px 0;
 	 margin:0;
 	 text-align:left;
 	 border-top:1px solid #ddd;

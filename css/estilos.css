@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import url(css/modules/_estructuraProductos.css);
+@import url(../modules/_estructuraProductos.css);
 /*<-- prueba @import. Pagina: Productos*/
-@import url(css/modules/_estructuraCombos.css);
+@import url(../modules/_estructuraCombos.css);
 /*Pagina: index*/
 /*<-- Color gradiente para bordes y fondos |fail/corregir| */
 /* Map de colores de redes sociales*/
@@ -120,9 +120,9 @@
 .bodyEstructura {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-rows: 2fr auto auto auto auto auto;
   grid-gap: 1rem;
-  grid-template-areas: "titulo titulo titulo" "publi publi publi" "main main main" "main main main" "pres pres pres" "footer footer footer";
+  grid-template-areas: "portada portada portada" "publi publi publi" "main main main" "main main main" "pres pres pres" "footer footer footer";
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   justify-items: stretch;
@@ -146,8 +146,8 @@
 }
 
 .bodyEstructura__box1 {
-  grid-area: titulo;
-  margin-bottom: 30px;
+  grid-area: portada;
+  background-image: url("../media/portada.jpg");
 }
 
 .bodyEstructura__box2 {
@@ -164,6 +164,7 @@
 }
 
 .bodyEstructura__box3 {
+  padding: 10px;
   grid-area: pres;
 }
 .bodyEstructura__box3 img {
@@ -175,11 +176,13 @@
 }
 
 .bodyEstructura__box4 {
+  padding: 10px;
   grid-area: footer;
   padding-bottom: 20px;
 }
 
 .bodyEstructura__box5 {
+  padding: 10px;
   grid-area: main;
 }
 
@@ -228,7 +231,7 @@
 @media only screen and (min-width: 768px) {
   .bodyEstructura {
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: 50rem auto auto auto auto auto;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
   }
@@ -250,20 +253,27 @@
 @media only screen and (min-width: 1024px) {
   .bodyEstructura {
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    padding: 10px;
-    grid-template-areas: "titulo titulo titulo" "publi publi publi" "main main main" "main main main" "pres pres pres" "footer footer footer";
+    grid-template-rows: 40rem auto auto auto auto auto;
+    grid-template-areas: "portada portada portada" "publi publi publi" "main main main" "main main main" "pres pres pres" "footer footer footer";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
   }
 
   .bodyEstructura__box1 {
     font-size: 40px;
+    padding: 0;
+    background-size: cover;
+    text-align: center;
+  }
+  .bodyEstructura__box1 h2 {
+    color: gold;
+    padding-top: 10px;
   }
 
   .bodyEstructura__box2 img {
-    width: 17em;
-    height: 15em;
+    width: 300px;
+    height: 250px;
+    padding: 10px;
   }
 
   .bodyEstructura__box3 img {
@@ -283,15 +293,8 @@
     animation-play-state: running;
   }
 
-  .menuDesplegable label {
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
-
   .bodyEstructura__texto {
-    padding-top: 150px;
+    padding-top: 100px;
   }
 
   .tablaDeCombos__Columna {
@@ -302,6 +305,37 @@
 
   .tablaDeCombos__Columna:last-child {
     margin-right: 0;
+  }
+
+  .menuDesplegable a:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .menuDesplegable ul {
+    display: none;
+  }
+  .menuDesplegable input:checked ~ ul {
+    display: inline;
+    z-index: 1;
+    animation-duration: 0.5s;
+    animation-name: fadein;
+  }
+  .menuDesplegable li {
+    display: inline;
+  }
+  .menuDesplegable label {
+    box-sizing: border-box;
+    border: 1px solid silver;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
   }
 }
 /*<-- MediaQueries -->*/
