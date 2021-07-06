@@ -1,7 +1,4 @@
 @charset "UTF-8";
-@import url(lukas96k.github.io/ProyectoCoderHouse/modules/_estructuraProductos.css);
-@import url(lukas96k.github.io/ProyectoCoderHouse/modules/_estructuraCombos.css);
-/*Pagina: index*/
 /*<-- Color gradiente para bordes y fondos |fail/corregir| */
 /* Map de colores de redes sociales*/
 @keyframes fadein {
@@ -451,7 +448,8 @@
   padding-bottom: 10px;
   color: gold;
 }
-.novedades .novedades__Entradas {
+
+.novedades__Entradas {
   display: block;
   background-color: #590242;
   text-align: left;
@@ -461,8 +459,127 @@
   margin-bottom: 50px;
   padding: 5px;
 }
-.novedades .novedades__Entradas h1 {
+.novedades__Entradas h1 {
   color: gold;
 }
+
+/*Inicio Seccion Tabla combos*/
+.tablaDeCombos {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tablaDeCombos__Columna {
+  display: inline-block;
+  background-color: #590242;
+  width: 32%;
+  height: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #ddd;
+}
+
+.tablaDeCombos__ColumnaHeader {
+  background-color: #090b21;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px h3;
+  border-top-right-radius-color: silver;
+  border-top-right-radius-text-align: center;
+  border-top-right-radius-font-size: 30px;
+  border-top-right-radius-font-weight: 600;
+  border-top-right-radius-margin-bottom: 0;
+}
+.tablaDeCombos__ColumnaHeader p {
+  text-align: center;
+  color: #f3f3f3;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.tablaDeCombos__ColumnaCaracteristicas {
+  padding: 0 20px 20px 20px;
+  color: gold;
+}
+.tablaDeCombos__ColumnaCaracteristicas p {
+  padding: 10px 0;
+  margin: 0;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+.tablaDeCombos__BtnCompra {
+  padding: 10px;
+  max-width: 250px;
+  text-align: center;
+  background-color: #090b21;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  border: 2px solid silver;
+  transition: all 0.3s a;
+  transition-color: #f3f3f3;
+  transition-padding: 10px;
+  transition-font-size: 20px;
+  transition-text-transform: uppercase;
+  transition-transition: all 0.3s;
+}
+
+.tablaDeCombos__BtnCompra:hover {
+  background-color: #f3f3f3;
+  transition: all 0.3s;
+}
+
+.tablaDeCombos__BtnCompra:hover a {
+  color: #dd9933;
+  transition: all 0.3s;
+}
+
+/*Fin Seccion Tabla combos*/
+/*Inicio Seccion productos*/
+.containerProd {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 150px 150px 150px;
+  grid-gap: 10px;
+  padding: 15px;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+.gridProductosItems {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  background-color: #02619473;
+  color: gold;
+}
+
+.gridProductosItems:first-child {
+  grid-row: 1/5;
+  background-color: #203844ad;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.gridProductosItems:first-child ul li {
+  list-style: none;
+  padding-top: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 1px silver;
+}
+
+.gridProductosItems:first-child ul li a {
+  text-decoration: none;
+  color: gold;
+}
+
+.gridProductosItems:nth-child(2) {
+  grid-column: 2/5;
+  background-color: #203844ad;
+}
+
+/*Seccion productos*/
 
 /*# sourceMappingURL=estilos.css.map */
