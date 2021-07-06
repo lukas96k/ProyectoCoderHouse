@@ -1,7 +1,6 @@
 @charset "UTF-8";
-@import url(../modules/_estructuraProductos.css);
-/*<-- prueba @import. Pagina: Productos*/
-@import url(../modules/_estructuraCombos.css);
+@import url(lukas96k.github.io/ProyectoCoderHouse/modules/_estructuraProductos.css);
+@import url(lukas96k.github.io/ProyectoCoderHouse/modules/_estructuraCombos.css);
 /*Pagina: index*/
 /*<-- Color gradiente para bordes y fondos |fail/corregir| */
 /* Map de colores de redes sociales*/
