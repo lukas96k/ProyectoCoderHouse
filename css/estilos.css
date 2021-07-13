@@ -37,12 +37,10 @@
 /*<-- Header -->*/
 .bloque-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 1rem;
   align-items: center;
   border-bottom: 5px solid;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
@@ -53,6 +51,7 @@
   left: 0;
   top: 0;
   right: 0;
+  width: 23.5rem;
 }
 
 .header__icono {
@@ -79,8 +78,10 @@
   display: none;
 }
 .menuDesplegable input:checked ~ ul {
-  display: block;
+  display: inline;
   z-index: 1;
+  animation-duration: 0.5s;
+  animation-name: fadein;
 }
 .menuDesplegable input {
   display: none;
@@ -93,7 +94,6 @@
   width: 30px;
   height: 30px;
   line-height: 30px;
-  font-weight: bold;
   text-align: center;
   user-select: none;
 }
@@ -113,12 +113,16 @@
 
 /*<-- Header -->*/
 /*<-- Estructura general -->*/
+.TituloPC h1 {
+  padding-top: 150px;
+}
+
 .bodyEstructura {
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 2fr auto auto auto auto auto;
-  grid-gap: 1rem;
-  grid-template-areas: "portada portada portada" "publi publi publi" "main main main" "main main main" "pres pres pres" "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 35rem auto auto auto auto auto auto;
+  grid-gap: 15rem;
+  grid-template-areas: "portada portada portada" "publi publi publi" "serv serv serv" "main main main" "main main main" "pres pres pres" "footer footer footer";
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   justify-items: stretch;
@@ -134,7 +138,7 @@
   color: silver;
   font-family: "Farro", sans-serif;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 .bodyEstructura__texto a {
   text-decoration: none;
@@ -144,17 +148,18 @@
 .bodyEstructura__box1 {
   grid-area: portada;
   background-image: url("../media/portada.jpg");
+  background-size: cover;
+}
+.bodyEstructura__box1 h2 {
+  color: gold;
+  padding-top: 12rem;
 }
 
 .bodyEstructura__box2 {
   grid-area: publi;
 }
 .bodyEstructura__box2 img {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  width: 39%;
-  background-color: #090b21;
+  width: 12rem;
   animation-duration: 2s;
   animation-name: fadein;
 }
@@ -167,7 +172,7 @@
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  width: 70%;
+  width: 80%;
   padding: 5px;
 }
 
@@ -178,176 +183,38 @@
 }
 
 .bodyEstructura__box5 {
-  padding: 10px;
   grid-area: main;
+  padding: 10px;
+}
+
+.bodyEstructura__box6 {
+  grid-area: serv;
+  padding-top: 20px;
+}
+.bodyEstructura__box6 img {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  width: 14rem;
+}
+.bodyEstructura__box6 h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /*<-- Estructura general -->*/
-/*<-- MediaQueries -->*/
-@media only screen and (max-width: 375px) {
-  .tablaDeCombos__Columna {
-    width: 80%;
-    height: 60%;
-    max-width: 300px;
-    margin-bottom: 50px;
-  }
-}
-@media only screen and (min-width: 375px) {
-  .bodyEstructura {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-  }
-
-  .bodyEstructura__box3 img {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-    width: 40%;
-  }
-}
-@media only screen and (min-width: 425px) {
-  .bodyEstructura {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-  }
-
-  .bodyEstructura__box3 img {
-    width: 35%;
-  }
-
-  .tablaDeCombos__Columna {
-    width: 32%;
-    float: left;
-    margin-right: 2%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .bodyEstructura {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 50rem auto auto auto auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-  }
-
-  .bodyEstructura__box2 img {
-    width: 23%;
-  }
-
-  .bodyEstructura__box3 img {
-    width: 50%;
-  }
-
-  .tablaDeCombos__Columna {
-    width: 32%;
-    float: left;
-    margin-right: 2%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .bodyEstructura {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 40rem auto auto auto auto auto;
-    grid-template-areas: "portada portada portada" "publi publi publi" "main main main" "main main main" "pres pres pres" "footer footer footer";
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-  }
-
-  .bodyEstructura__box1 {
-    font-size: 40px;
-    padding: 0;
-    background-size: cover;
-    text-align: center;
-  }
-  .bodyEstructura__box1 h2 {
-    color: gold;
-    padding-top: 10px;
-  }
-
-  .bodyEstructura__box2 img {
-    width: 300px;
-    height: 250px;
-    padding: 10px;
-  }
-
-  .bodyEstructura__box3 img {
-    width: 45em;
-    height: 30em;
-  }
-
-  .header__icono {
-    height: 100px;
-    animation: anim_pulso 2s infinite;
-    animation-play-state: running;
-  }
-
-  .header__titulo {
-    font-size: 30px;
-    animation: anim_pulso 2s infinite;
-    animation-play-state: running;
-  }
-
-  .bodyEstructura__texto {
-    padding-top: 100px;
-  }
-
-  .tablaDeCombos__Columna {
-    width: 32%;
-    float: left;
-    margin-right: 2%;
-  }
-
-  .tablaDeCombos__Columna:last-child {
-    margin-right: 0;
-  }
-
-  .menuDesplegable a:hover {
-    cursor: pointer;
-    transform: translateY(-3px);
-    transition: all 0.3s ease-out;
-    border-radius: 5px;
-    font-size: 20px;
-  }
-  .menuDesplegable ul {
-    display: none;
-  }
-  .menuDesplegable input:checked ~ ul {
-    display: inline;
-    z-index: 1;
-    animation-duration: 0.5s;
-    animation-name: fadein;
-  }
-  .menuDesplegable li {
-    display: inline;
-  }
-  .menuDesplegable label {
-    box-sizing: border-box;
-    border: 1px solid silver;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-  }
-}
-/*<-- MediaQueries -->*/
 /*<-- Formulario de contacto -->*/
 .contenedorForm {
   align-content: center;
   margin-left: 10px;
   border-radius: 7px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px 0;
   width: 80%;
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: fadein;
 }
 .contenedorForm h2 {
   font-size: 20px;
@@ -452,7 +319,6 @@
 .novedades__Entradas {
   display: block;
   background-color: #590242;
-  text-align: left;
   height: auto;
   max-width: 100%;
   margin-top: 50px;
@@ -461,20 +327,20 @@
 }
 .novedades__Entradas h1 {
   color: gold;
+  text-align: center;
 }
 
 /*Inicio Seccion Tabla combos*/
 .tablaDeCombos {
   display: inline-block;
   width: 100%;
-  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .tablaDeCombos__Columna {
   display: inline-block;
   background-color: #590242;
-  width: 32%;
-  height: 80%;
+  width: 16rem;
   max-width: 500px;
   border-radius: 10px;
   box-shadow: 0px 2px 5px #ddd;
@@ -484,12 +350,14 @@
   background-color: #090b21;
   padding: 10px;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px h3;
-  border-top-right-radius-color: silver;
-  border-top-right-radius-text-align: center;
-  border-top-right-radius-font-size: 30px;
-  border-top-right-radius-font-weight: 600;
-  border-top-right-radius-margin-bottom: 0;
+  border-top-right-radius: 10px;
+}
+.tablaDeCombos__ColumnaHeader h3 {
+  color: silver;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 .tablaDeCombos__ColumnaHeader p {
   text-align: center;
@@ -499,7 +367,7 @@
 }
 
 .tablaDeCombos__ColumnaCaracteristicas {
-  padding: 0 20px 20px 20px;
+  padding: 0 10px 20px;
   color: gold;
 }
 .tablaDeCombos__ColumnaCaracteristicas p {
@@ -526,12 +394,13 @@
 }
 
 .tablaDeCombos__BtnCompra:hover {
-  background-color: #f3f3f3;
+  background-color: gold;
   transition: all 0.3s;
+  border: 2px solid silver;
 }
 
 .tablaDeCombos__BtnCompra:hover a {
-  color: #dd9933;
+  color: black;
   transition: all 0.3s;
 }
 
@@ -539,12 +408,13 @@
 /*Inicio Seccion productos*/
 .containerProd {
   display: grid;
-  grid-template-columns: 0.7fr 1fr 1fr 1fr;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 50px 150px 150px 150px;
-  grid-gap: 10px;
-  padding: 15px;
+  grid-gap: 5px;
+  padding: 5px;
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: fadein;
 }
 
 .gridProductosItems {
@@ -558,7 +428,7 @@
 .gridProductosItems:first-child {
   grid-row: 1/5;
   background-color: #203844ad;
-  font-size: 20px;
+  font-size: 1rem;
   padding: 5px;
 }
 
@@ -580,6 +450,291 @@
   background-color: #203844ad;
 }
 
-/*Seccion productos*/
+/*Fin Seccion productos*/
+/*<-- Inicio MediaQueries -->*/
+@media only screen and (min-width: 375px) {
+  .tablaDeCombos__Columna {
+    width: 80%;
+    height: 60%;
+    max-width: 500px;
+    margin-bottom: 50px;
+  }
+
+  .bodyEstructura {
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 35rem auto auto auto auto auto auto;
+    grid-template-areas: "portada portada portada" "publi publi publi" "serv serv serv" "main main main" "main main main" "pres pres pres" "footer footer footer";
+    grid-gap: 15rem;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+
+  .bodyEstructura__box3 img {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .bloque-header {
+    justify-content: left;
+  }
+
+  .header__icono {
+    height: 120px;
+  }
+
+  .header {
+    width: 40rem;
+  }
+
+  .bodyEstructura {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 30rem auto auto auto auto auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-items: stretch;
+    padding-top: 3.9rem;
+  }
+
+  .bodyEstructura__box1 {
+    padding-top: 7rem;
+    font-size: 25px;
+    background-size: cover;
+    text-align: center;
+  }
+  .bodyEstructura__box1 h2 {
+    padding-top: 30px;
+  }
+
+  .bodyEstructura__box2 img {
+    width: 18rem;
+  }
+
+  .bodyEstructura__box3 img {
+    width: 80%;
+  }
+
+  .bodyEstructura__box6 {
+    width: 40rem;
+  }
+  .bodyEstructura__box6 img {
+    width: 30rem;
+  }
+
+  .tablaDeCombos {
+    font-size: 20px;
+  }
+
+  .tablaDeCombos__Columna {
+    width: 80%;
+  }
+
+  .menuDesplegable label {
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    width: 50rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .bloque-header {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .header__icono {
+    height: 180px;
+    animation: anim_pulso 2s infinite;
+    animation-play-state: running;
+  }
+
+  .header__titulo {
+    font-size: 40px;
+    color: gold;
+    animation: anim_pulso 2s infinite;
+    animation-play-state: running;
+  }
+
+  .menuDesplegable a:hover {
+    font-size: 40px;
+  }
+  .menuDesplegable label {
+    width: 100px;
+  }
+
+  .bodyEstructura {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50rem auto auto auto auto auto auto;
+    grid-template-areas: "portada portada portada" "publi publi publi" "serv serv serv" "main main main" "main main main" "pres pres pres" "footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+
+  .bodyEstructura__box1 {
+    font-size: 40px;
+    background-size: cover;
+    padding-top: 15rem;
+    text-align: center;
+  }
+  .bodyEstructura__box1 h2 {
+    color: gold;
+    padding-top: 10px;
+  }
+
+  .bodyEstructura__box2 img {
+    width: 80%;
+  }
+
+  .bodyEstructura__box3 img {
+    width: 80%;
+  }
+
+  .bodyEstructura__box6 {
+    width: 80%;
+  }
+
+  .tablaDeCombos__Columna {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .menuDesplegable a:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .menuDesplegable input:checked ~ ul {
+    display: inline;
+    z-index: 1;
+    animation-duration: 0.5s;
+    animation-name: fadein;
+  }
+  .menuDesplegable input {
+    display: none;
+  }
+  .menuDesplegable label {
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid silver;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  .menuDesplegable li {
+    display: block;
+    background: linear-gradient(to left, #743ad5, #d53a9d);
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid silver;
+  }
+  .menuDesplegable label:hover {
+    transition: all 0.6s ease-out;
+    border-radius: 5px;
+    font-size: 30px;
+  }
+
+  .bodyEstructura {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50rem auto auto auto auto auto auto;
+    grid-template-areas: "portada portada portada" "publi publi publi" "serv serv serv" "main main main" "main main main" "pres pres pres" "footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+
+  .bodyEstructura__box1 {
+    font-size: 40px;
+    background-size: cover;
+    text-align: center;
+  }
+  .bodyEstructura__box1 h2 {
+    color: gold;
+    padding-top: 10px;
+  }
+
+  .bodyEstructura__box2 img {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .bodyEstructura__box3 img {
+    width: 45em;
+    height: 30em;
+  }
+
+  .bodyEstructura__box6 {
+    width: 80%;
+  }
+  .bodyEstructura__box6 img {
+    width: 30rem;
+  }
+
+  .header__icono {
+    height: 80px;
+  }
+
+  .header {
+    width: 82rem;
+  }
+
+  .header__titulo {
+    font-size: 30px;
+  }
+
+  .bodyEstructura__texto {
+    padding-top: 0px;
+  }
+
+  .tablaDeCombos {
+    align-items: space-around;
+    margin-top: 10px;
+  }
+
+  .tablaDeCombos__ColumnaHeader {
+    padding: 10px;
+  }
+  .tablaDeCombos__ColumnaHeader h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .tablaDeCombos__BtnCompra {
+    padding: 10px;
+    max-width: 250px;
+    text-align: center;
+    background-color: #090b21;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    border: 2px solid silver;
+    transition: all 0.3s a;
+    transition-color: #f3f3f3;
+    transition-padding: 10px;
+    transition-font-size: 20px;
+    transition-text-transform: uppercase;
+    transition-transition: all 0.3s;
+  }
+
+  .tablaDeCombos__BtnCompra:hover {
+    background-color: gold;
+    transition: all 0.3s;
+    border: 2px solid silver;
+  }
+
+  .tablaDeCombos__BtnCompra:hover a {
+    color: black;
+    transition: all 0.3s;
+  }
+}
+/*<-- Fin MediaQueries -->*/
 
 /*# sourceMappingURL=estilos.css.map */
