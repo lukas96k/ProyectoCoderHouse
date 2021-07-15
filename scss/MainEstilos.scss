@@ -33,8 +33,8 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 																/*<-- Header -->*/
 .bloque-header {
 	display: flex;
-	justify-content: flex-start;
-	gap:1rem;
+	justify-content: center;
+	gap:10px;
 	align-items: center;
 	border-bottom: 5px solid;
 	border-image-slice: 1;
@@ -54,7 +54,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	animation-play-state: running;
 }
 .header__titulo{
-	font-size: 20px;
+	font-size: 13px;
 	color: gold;
 	animation: anim_pulso 2s infinite;
 	animation-play-state: running;
@@ -71,7 +71,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	ul{
 	  display: none;
 	}
-	input:checked  ~ ul{
+	input:checked ~ ul{
 	  display:inline;
 	  z-index: 1;
 	  animation-duration: 0.5s;
@@ -185,7 +185,6 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 }
 .bodyEstructura__box6{
 	grid-area: serv;
-	padding-top:20px;
 	img {
 		border: 1px solid;
 		border-image-slice: 1;
@@ -321,18 +320,15 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 
 .tablaDeCombos {
 	display:inline-block;
-	width:100%;
-	margin-bottom: 50px;
+	width:80%;
 }
 
 .tablaDeCombos__Columna{
 	display:inline-block;
 	background-color:#590242;
 	width:16rem;
-	max-width:500px;
 	border-radius:10px;
 	box-shadow: 0px 2px 5px #ddd;
-
 }
 .tablaDeCombos__ColumnaHeader {
 	 background-color:#090b21;
@@ -342,7 +338,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	 h3 {
 		color:silver;
 		text-align:center;
-		font-size:30px;
+		font-size:20px;
 		font-weight:600;
 		margin-bottom:0;
 	}
@@ -360,8 +356,9 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	p {
 		padding:10px 0;
 		margin:0;
-		text-align:left;
+		text-align:center;
 		border-top:1px solid #ddd;
+		font-size: 14px;
 	}
 }
 
@@ -439,8 +436,6 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 @media only screen and (min-width: 375px) {
 	.tablaDeCombos__Columna{
 		width:80%;
-		height: 60%;
-		max-width:500px;
 		margin-bottom:50px;
 	}
 	.bodyEstructura {
@@ -453,9 +448,9 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
     						 "main main main"
     						 "pres pres pres"
     					 	"footer footer footer";
-    	grid-gap:15rem;
+    grid-gap:15rem;
 		grid-row-gap: 10px;
-   		grid-column-gap: 10px;
+   	grid-column-gap: 10px;
 	}
 	.bodyEstructura__box3 img {
 		width: 80%;
@@ -481,12 +476,12 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	}
     .bodyEstructura__box1 {
     	padding-top: 7rem;
-		font-size: 25px;
-		background-size: cover;
+			font-size: 25px;
+			background-size: cover;
 		h2 {
 			padding-top:30px;
 		}
-		text-align: center;
+			text-align: center;
 	}
 	.bodyEstructura__box2{
 		img {
@@ -501,11 +496,8 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	.bodyEstructura__box6{
 		width: 40rem;
 		img {
-			width: 30rem;
+			width: 24rem;
 		}
-	}
-	.tablaDeCombos {
-		font-size: 20px;
 	}
 	.tablaDeCombos__Columna {
 	 	width:80%;
@@ -519,10 +511,6 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 @media only screen and (min-width: 768px) {
 	.header {
 		width: 50rem;
-		position: fixed;
-		left: 0;
-		top: 0;
-		right: 0;
 	}
 	.bloque-header {
 		justify-content: space-around;
@@ -535,9 +523,6 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	}
 	.header__titulo{
 		font-size: 40px;
-		color: gold;
-		animation: anim_pulso 2s infinite;
-		animation-play-state: running;
 	}
 
 	.menuDesplegable {
@@ -551,7 +536,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	.bodyEstructura {
 		grid-template-columns: auto auto auto;
 		grid-template-rows: 50rem auto auto auto auto auto auto;
-    	grid-template-areas: "portada portada portada"
+    grid-template-areas: "portada portada portada"
     						 "publi publi publi"
     						 "serv serv serv"
     						 "main main main"
@@ -559,7 +544,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
     						 "pres pres pres"
     					 	"footer footer footer";
 		grid-row-gap: 10px;
-   		grid-column-gap: 10px;
+   	grid-column-gap: 10px;
 	}
    .bodyEstructura__box1 {
 		font-size: 40px;
@@ -579,6 +564,9 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	}
 	.bodyEstructura__box6 {
 		width: 80%;
+		img {
+    	width: 23rem;
+		}
 	}
 	.tablaDeCombos__Columna {
 		width:80%;
@@ -659,9 +647,9 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 		height: 30em;
 	}
 	.bodyEstructura__box6 {
-		width: 80%;
+		width: 100%;
 		img {
-    		width: 30rem;
+    		width: 24.7rem;
 		}
 	}
 	.header__icono{
@@ -677,23 +665,15 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 		padding-top: 0px;
 	}
 	.tablaDeCombos {
-		align-items:space-around;
 		margin-top:10px;
 	}
-	.tablaDeCombos__ColumnaHeader {
-		 padding:10px;
-		 h3 {
-			text-align:center;
-			font-size:25px;
-		}
+	.tablaDeCombos__Columna {
+    width: 40%;
 	}
 
 	.tablaDeCombos__BtnCompra {
-		padding:10px;
-		max-width:250px;
 		text-align:center;
 		background-color: #090b21;
-		margin: 0 auto 20px;
 		border-radius:10px;
 		border: 2px solid silver;
 		transition: all 0.3s
@@ -714,6 +694,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 		color:black;
 		transition: all 0.3s
 	}
+
 }
 
 

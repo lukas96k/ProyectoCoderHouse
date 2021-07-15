@@ -37,8 +37,8 @@
 /*<-- Header -->*/
 .bloque-header {
   display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
   border-bottom: 5px solid;
   border-image-slice: 1;
@@ -61,7 +61,7 @@
 }
 
 .header__titulo {
-  font-size: 20px;
+  font-size: 13px;
   color: gold;
   animation: anim_pulso 2s infinite;
   animation-play-state: running;
@@ -189,7 +189,6 @@
 
 .bodyEstructura__box6 {
   grid-area: serv;
-  padding-top: 20px;
 }
 .bodyEstructura__box6 img {
   border: 1px solid;
@@ -333,15 +332,13 @@
 /*Inicio Seccion Tabla combos*/
 .tablaDeCombos {
   display: inline-block;
-  width: 100%;
-  margin-bottom: 50px;
+  width: 80%;
 }
 
 .tablaDeCombos__Columna {
   display: inline-block;
   background-color: #590242;
   width: 16rem;
-  max-width: 500px;
   border-radius: 10px;
   box-shadow: 0px 2px 5px #ddd;
 }
@@ -355,7 +352,7 @@
 .tablaDeCombos__ColumnaHeader h3 {
   color: silver;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -373,8 +370,9 @@
 .tablaDeCombos__ColumnaCaracteristicas p {
   padding: 10px 0;
   margin: 0;
-  text-align: left;
+  text-align: center;
   border-top: 1px solid #ddd;
+  font-size: 14px;
 }
 
 .tablaDeCombos__BtnCompra {
@@ -455,8 +453,6 @@
 @media only screen and (min-width: 375px) {
   .tablaDeCombos__Columna {
     width: 80%;
-    height: 60%;
-    max-width: 500px;
     margin-bottom: 50px;
   }
 
@@ -517,11 +513,7 @@
     width: 40rem;
   }
   .bodyEstructura__box6 img {
-    width: 30rem;
-  }
-
-  .tablaDeCombos {
-    font-size: 20px;
+    width: 24rem;
   }
 
   .tablaDeCombos__Columna {
@@ -535,10 +527,6 @@
 @media only screen and (min-width: 768px) {
   .header {
     width: 50rem;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
   }
 
   .bloque-header {
@@ -554,9 +542,6 @@
 
   .header__titulo {
     font-size: 40px;
-    color: gold;
-    animation: anim_pulso 2s infinite;
-    animation-play-state: running;
   }
 
   .menuDesplegable a:hover {
@@ -595,6 +580,9 @@
 
   .bodyEstructura__box6 {
     width: 80%;
+  }
+  .bodyEstructura__box6 img {
+    width: 23rem;
   }
 
   .tablaDeCombos__Columna {
@@ -673,10 +661,10 @@
   }
 
   .bodyEstructura__box6 {
-    width: 80%;
+    width: 100%;
   }
   .bodyEstructura__box6 img {
-    width: 30rem;
+    width: 24.7rem;
   }
 
   .header__icono {
@@ -696,24 +684,16 @@
   }
 
   .tablaDeCombos {
-    align-items: space-around;
     margin-top: 10px;
   }
 
-  .tablaDeCombos__ColumnaHeader {
-    padding: 10px;
-  }
-  .tablaDeCombos__ColumnaHeader h3 {
-    text-align: center;
-    font-size: 25px;
+  .tablaDeCombos__Columna {
+    width: 40%;
   }
 
   .tablaDeCombos__BtnCompra {
-    padding: 10px;
-    max-width: 250px;
     text-align: center;
     background-color: #090b21;
-    margin: 0 auto 20px;
     border-radius: 10px;
     border: 2px solid silver;
     transition: all 0.3s a;
