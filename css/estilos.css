@@ -203,66 +203,113 @@
 
 /*<-- Estructura general -->*/
 /*<-- Formulario de contacto -->*/
-.contenedorForm {
-  align-content: center;
-  margin-left: 10px;
-  border-radius: 7px;
-  padding: 0 20px 0;
-  width: 80%;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+.content {
+  padding-bottom: 150px;
   animation-duration: 2s;
   animation-name: fadein;
 }
-.contenedorForm h2 {
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container ul {
+  list-style: none;
+  padding: 0;
 }
 
-.boton {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 80%;
-  height: 30px;
-  font-family: "Farro", sans-serif;
+.logo {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 2em;
+}
+.logo span {
+  color: gold;
+}
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background: #222222;
+}
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-form form label {
+  display: block;
+}
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1/3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.7em;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(to left, #743ad5, #d53a9d);
-  color: silver;
+  background: none;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #d53a9d;
 }
 
-.boton:hover {
-  cursor: pointer;
-  transform: translateY(-3px);
-  transition: all 0.3s ease-out;
+.contact-form form button {
+  background: #d53a9d;
+  border: 0;
+  padding: 1em;
 }
 
-.boton:active {
-  transform: translateX(3px);
-  transition: all 0.3s ease-out;
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: gold;
+  color: black;
+  transition: background-color 1s ease-out;
+  outline: 0;
 }
 
-.controlForm {
-  width: 80%;
-  box-shadow: -5px 1px 2px #590242;
-  font-size: 15px;
-  margin: 10px 10px 10px 10px;
-  font-family: "Farro", sans-serif;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+.contact-info {
+  background: #000;
+}
+.contact-info ul li {
+  list-style-type: none;
 }
 
-.controlForm:focus {
-  height: 30px;
+.contact-info h4, .contact-info ul, .contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
 }
 
-#mensaje:focus {
-  height: 100px;
-}
+@media (min-width: 700px) {
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+
+  .contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: left;
+  }
+}
 /*<-- Formulario de contacto -->*/
 .redes {
   padding-top: 50px;
@@ -331,12 +378,11 @@
 
 /*Inicio Seccion Tabla combos*/
 .tablaDeCombos {
-  display: inline-block;
+  display: inline-flex;
   width: 80%;
 }
 
 .tablaDeCombos__Columna {
-  display: inline-block;
   background-color: #590242;
   width: 16rem;
   border-radius: 10px;
@@ -560,8 +606,6 @@
   }
 
   .bodyEstructura__box1 {
-    font-size: 40px;
-    background-size: cover;
     padding-top: 15rem;
     text-align: center;
   }
@@ -651,7 +695,7 @@
   }
 
   .bodyEstructura__box2 img {
-    width: 300px;
+    width: 16rem;
     padding: 10px;
   }
 
@@ -664,7 +708,10 @@
     width: 100%;
   }
   .bodyEstructura__box6 img {
-    width: 24.7rem;
+    width: 30rem;
+  }
+  .bodyEstructura__box6 .tablaDeCombos__Columna {
+    width: 60%;
   }
 
   .header__icono {
