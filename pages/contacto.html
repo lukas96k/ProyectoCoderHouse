@@ -57,9 +57,15 @@
                         <textarea name="message" rows="3"></textarea>
                     </p>
                     <p class="block">
-                        <button>
-                            ¡Enviar!
-                        </button>
+                    <button><a href="#openModal">¡Enviar!</a></button>
+                    <div id="openModal" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Close" class="close">X</a>
+                            <img src="../media/check.png" alt="check-img">
+                            <p> ¡Mensaje enviado!</p>
+                            <p> Trataremos de darte una respuesta lo antes posible.</p>
+                        </div>
+                    </div>
                     </p>
                 </form>
             </div>
