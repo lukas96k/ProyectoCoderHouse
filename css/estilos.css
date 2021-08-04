@@ -51,7 +51,7 @@
   left: 0;
   top: 0;
   right: 0;
-  width: 20rem;
+  width: 100%;
 }
 
 .header__icono {
@@ -68,6 +68,9 @@
   text-shadow: 5px 5px 5px black;
 }
 
+.menuDesplegable a {
+  display: block;
+}
 .menuDesplegable a:hover {
   cursor: pointer;
   transform: translateY(-3px);
@@ -466,12 +469,11 @@
   display: grid;
   align-content: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 50px 20rem 20rem;
+  grid-template-rows: 1fr 50px auto auto;
   grid-gap: 5px;
   padding: 5px;
   animation-duration: 3s;
   animation-name: fadein;
-  padding: 50px 10px;
 }
 
 .gridProductosItems {
@@ -624,10 +626,6 @@
 /*<-- Fin seccion modal  -->*/
 /*<-- Inicio MediaQueries -->*/
 @media only screen and (min-width: 375px) {
-  .header {
-    width: 25rem;
-  }
-
   .tablaDeCombos__Columna {
     width: 80%;
     margin-bottom: 50px;
@@ -645,18 +643,18 @@
   .bodyEstructura__box3 img {
     width: 80%;
   }
+
+  .tarjetaProd__Btn {
+    padding-bottom: 10px;
+  }
 }
 @media only screen and (min-width: 425px) {
   .bloque-header {
-    justify-content: left;
+    justify-content: center;
   }
 
   .header__icono {
     height: 120px;
-  }
-
-  .header {
-    width: 40rem;
   }
 
   .bodyEstructura {
@@ -706,17 +704,13 @@
     padding-top: 130px;
   }
 
-  .header {
-    width: 50rem;
-  }
-
   .bloque-header {
     justify-content: space-around;
     align-items: center;
   }
 
   .header__icono {
-    height: 180px;
+    height: 100px;
     animation: anim_pulso 2s infinite;
     animation-play-state: running;
   }
@@ -955,10 +949,6 @@
 
   .header__icono {
     height: 80px;
-  }
-
-  .header {
-    width: 82rem;
   }
 
   .header__titulo {

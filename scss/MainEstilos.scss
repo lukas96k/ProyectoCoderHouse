@@ -46,7 +46,7 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	left: 0;
 	top: 0;
 	right: 0;
-	width: 20rem;
+	width: 100%;
 }
 .header__icono{
 	height: 60px;
@@ -62,6 +62,9 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 }
 
 .menuDesplegable {
+	a {
+		display:block;
+	}
 	a:hover{
 		cursor: pointer;
 		transform: translateY(-3px);
@@ -456,12 +459,11 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	display: grid;
 	align-content: center;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 50px 20rem 20rem;
+	grid-template-rows: 1fr 50px auto auto;
 	grid-gap: 5px;
 	padding: 5px;
 	animation-duration: 3s;
   	animation-name: fadein;
-  	padding: 50px 10px;
 }
 .gridProductosItems{
 	border: 1px solid;
@@ -597,9 +599,6 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 												/*<-- Inicio MediaQueries -->*/
 
 @media only screen and (min-width: 375px) {
-	.header {
-		width: 25rem;
-	}
 	.tablaDeCombos__Columna{
 		width:80%;
 		margin-bottom:50px;
@@ -615,23 +614,23 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
     						 "pres pres pres"
     					 	"footer footer footer";
     grid-gap:15rem;
-		grid-row-gap: 10px;
+	grid-row-gap: 10px;
    	grid-column-gap: 10px;
 	}
 	.bodyEstructura__box3 img {
 		width: 80%;
 	}
+	.tarjetaProd__Btn {
+		padding-bottom: 10px;
+	}
 }
 @media only screen and (min-width: 425px) {
 	.bloque-header{
-		justify-content:left;
+		justify-content:center;
 	}
 	.header__icono {
     	height: 120px;
     }
-	.header {
-		width: 40rem;
-	}
 	.bodyEstructura {
 		grid-template-columns: auto auto auto;
 		grid-template-rows: 30rem auto auto auto auto auto auto;
@@ -678,15 +677,12 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	.bodyEstructura__texto {
 		padding-top: 130px;
 	}
-	.header {
-		width: 50rem;
-	}
 	.bloque-header {
 		justify-content: space-around;
 		align-items: center;
 	}
 	.header__icono{
-		height: 180px;
+		height: 100px;
 		animation: anim_pulso 2s infinite;
 		animation-play-state: running;
 	}
@@ -920,9 +916,6 @@ $coloresRedes: (colorFacebook: #3b5998, colorTwitter: #1DA1F2, colorInstagram: #
 	}
 	.header__icono{
 		height: 80px;
-	}
-	.header{
-		width: 82rem;
 	}
 	.header__titulo{
 		font-size: 30px;
